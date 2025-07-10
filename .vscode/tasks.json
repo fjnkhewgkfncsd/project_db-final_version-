@@ -1,0 +1,123 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Start Development Environment",
+			"type": "shell",
+			"command": "docker-compose",
+			"args": ["up", "-d"],
+			"group": "build",
+			"isBackground": true,
+			"problemMatcher": [],
+			"presentation": {
+				"echo": true,
+				"reveal": "always",
+				"focus": false,
+				"panel": "shared"
+			},
+			"options": {
+				"statusbar": {
+					"label": "🚀 Start Dev Environment"
+				}
+			}
+		},
+		{
+			"label": "Stop Development Environment",
+			"type": "shell",
+			"command": "docker-compose",
+			"args": ["down"],
+			"group": "build",
+			"isBackground": false,
+			"problemMatcher": [],
+			"presentation": {
+				"echo": true,
+				"reveal": "always",
+				"focus": false,
+				"panel": "shared"
+			}
+		},
+		{
+			"label": "Run Backend Tests",
+			"type": "shell",
+			"command": "npm",
+			"args": ["test"],
+			"group": "test",
+			"isBackground": false,
+			"problemMatcher": [],
+			"options": {
+				"cwd": "${workspaceFolder}/backend"
+			}
+		},
+		{
+			"label": "Run Frontend Tests",
+			"type": "shell",
+			"command": "npm",
+			"args": ["test", "--", "--coverage", "--watchAll=false"],
+			"group": "test",
+			"isBackground": false,
+			"problemMatcher": [],
+			"options": {
+				"cwd": "${workspaceFolder}/frontend"
+			}
+		},
+		{
+			"label": "Generate Sample Data",
+			"type": "shell",
+			"command": "python",
+			"args": ["data_generator.py"],
+			"group": "build",
+			"isBackground": false,
+			"problemMatcher": [],
+			"options": {
+				"cwd": "${workspaceFolder}/scripts"
+			}
+		},
+		{
+			"label": "Database Backup",
+			"type": "shell",
+			"command": "python",
+			"args": ["backup.py"],
+			"group": "build",
+			"isBackground": false,
+			"problemMatcher": [],
+			"options": {
+				"cwd": "${workspaceFolder}/db"
+			}
+		},
+		{
+			"label": "Start Emergency Recovery Server",
+			"type": "shell",
+			"command": "node",
+			"args": ["backend/emergency-recovery-server.js"],
+			"group": "build",
+			"isBackground": true,
+			"problemMatcher": [],
+			"presentation": {
+				"echo": true,
+				"reveal": "always",
+				"focus": false,
+				"panel": "shared"
+			},
+			"options": {
+				"statusbar": {
+					"label": "🚨 Emergency Recovery"
+				}
+			}
+		},
+		{
+			"label": "Test Emergency Recovery System",
+			"type": "shell",
+			"command": "python",
+			"args": ["test_emergency_recovery.py"],
+			"group": "test",
+			"isBackground": false,
+			"problemMatcher": [],
+			"presentation": {
+				"echo": true,
+				"reveal": "always",
+				"focus": true,
+				"panel": "shared"
+			}
+		}
+	]
+}

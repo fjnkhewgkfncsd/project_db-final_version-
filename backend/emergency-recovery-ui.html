@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Database Recovery</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #333;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            padding: 40px;
+            max-width: 600px;
+            width: 90%;
+            text-align: center;
+        }
+        
+        .emergency-icon {
+            font-size: 64px;
+            margin-bottom: 20px;
+        }
+        
+        h1 {
+            color: #dc3545;
+            margin-bottom: 10px;
+            font-size: 24px;
+        }
+        
+        .subtitle {
+            color: #6c757d;
+            margin-bottom: 30px;
+            font-size: 16px;
+        }
+        
+        .login-form, .recovery-interface {
+            display: none;
+            text-align: left;
+        }
+        
+        .login-form.active, .recovery-interface.active {
+            display: block;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+            color: #495057;
+        }
+        
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+        
+        .btn {
+            background: #dc3545;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            margin: 5px;
+        }
+        
+        .btn:hover {
+            background: #c82333;
+        }
+        
+        .btn:disabled {
+            background: #6c757d;
+            cursor: not-allowed;
+        }
+        
+        .btn-secondary {
+            background: #6c757d;
+        }
+        
+        .btn-secondary:hover {
+            background: #5a6268;
+        }
+        
+        .status-box {
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 20px 0;
+            text-align: left;
+        }
+        
+        .backup-list {
+            max-height: 300px;
+            overflow-y: auto;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            padding: 10px;
+        }
+        
+        .backup-item {
+            padding: 10px;
+            border: 1px solid #eee;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        
+        .backup-item:hover {
+            background: #f8f9fa;
+        }
+        
+        .backup-item.selected {
+            background: #e3f2fd;
+            border-color: #2196f3;
+        }
+        
+        .backup-item strong {
+            display: block;
+            color: #333;
+        }
+        
+        .backup-item small {
+            color: #666;
+        }
+        
+        .progress {
+            width: 100%;
+            height: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 10px 0;
+        }
+        
+        .progress-bar {
+            height: 100%;
+            background: #28a745;
+            width: 0%;
+            transition: width 0.3s;
+        }
+        
+        .alert {
+            padding: 15px;
+            border-radius: 6px;
+            margin: 15px 0;
+        }
+        
+        .alert-success {
+            background: #d4edda;
+            border: 1px solid #c3e6cb;
+            color: #155724;
+        }
+        
+        .alert-error {
+            background: #f8d7da;
+            border: 1px solid #f5c6cb;
+            color: #721c24;
+        }
+        
+        .alert-warning {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            color: #856404;
+        }
+        
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="emergency-icon">🚨</div>
+        <h1>Emergency Database Recovery</h1>
+        <p class="subtitle">Standalone recovery system for database disasters</p>
+        
+        <!-- Login Form -->
+        <div id="loginForm" class="login-form active">
+            <div class="status-box">
+                <h3>🔐 Emergency Authentication Required</h3>
+                <p>Please login with emergency credentials to access recovery tools.</p>
+            </div>
+            
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" value="emergency_admin" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" value="EmergencyRestore2025!" required>
+            </div>
+            
+            <button class="btn" onclick="login()">🔐 Login to Emergency System</button>
+            
+            <div id="loginError" class="alert alert-error hidden">
+                <strong>Authentication Failed!</strong>
+                <span id="loginErrorMessage"></span>
+            </div>
+        </div>
+        
+        <!-- Recovery Interface -->
+        <div id="recoveryInterface" class="recovery-interface">
+            <div class="status-box">
+                <h3>🚑 Emergency Recovery Interface</h3>
+                <p><strong>Status:</strong> <span id="systemStatus">🔄 Loading...</span></p>
+                <p><strong>Available Backups:</strong> <span id="backupCount">🔄 Loading...</span></p>
+            </div>
+            
+            <div class="form-group">
+                <label for="backupSelect">Select Backup File to Restore:</label>
+                <div id="backupList" class="backup-list">
+                    <p>🔄 Loading backup files...</p>
+                </div>
+            </div>
+            
+            <div id="selectedBackupInfo" class="status-box hidden">
+                <h4>📋 Selected Backup:</h4>
+                <p id="selectedBackupDetails"></p>
+            </div>
+            
+            <div style="text-align: center; margin: 20px 0;">
+                <button id="restoreBtn" class="btn" onclick="confirmRestore()" disabled>
+                    🔧 Restore Database
+                </button>
+                <button class="btn btn-secondary" onclick="refreshBackups()">
+                    🔄 Refresh Backups
+                </button>
+                <button class="btn btn-secondary" onclick="logout()">
+                    🚪 Logout
+                </button>
+            </div>
+            
+            <div id="restoreProgress" class="hidden">
+                <h4>🔄 Restore in Progress...</h4>
+                <div class="progress">
+                    <div id="progressBar" class="progress-bar"></div>
+                </div>
+                <p id="restoreStatus">Initializing restore operation...</p>
+            </div>
+            
+            <div id="restoreResult" class="hidden">
+                <!-- Results will be shown here -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let authToken = null;
+        let selectedBackup = null;
+        let backups = [];
+
+        // Login function
+        async function login() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            
+            if (!username || !password) {
+                showLoginError('Please enter both username and password');
+                return;
+            }
+            
+            try {
+                const response = await fetch('/api/emergency/login', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ username, password })
+                });
+                
+                const data = await response.json();
+                
+                if (response.ok && data.success) {
+                    authToken = data.data.token;
+                    document.getElementById('loginForm').classList.remove('active');
+                    document.getElementById('recoveryInterface').classList.add('active');
+                    loadBackups();
+                } else {
+                    showLoginError(data.message || 'Authentication failed');
+                }
+            } catch (error) {
+                showLoginError('Connection error: ' + error.message);
+            }
+        }
+        
+        // Show login error
+        function showLoginError(message) {
+            document.getElementById('loginErrorMessage').textContent = message;
+            document.getElementById('loginError').classList.remove('hidden');
+        }
+        
+        // Load available backups
+        async function loadBackups() {
+            try {
+                const response = await fetch('/api/emergency/backups', {
+                    headers: {
+                        'Authorization': `Bearer ${authToken}`
+                    }
+                });
+                
+                const data = await response.json();
+                
+                if (response.ok && data.success) {
+                    backups = data.data.backups;
+                    displayBackups();
+                    document.getElementById('backupCount').textContent = `${backups.length} files`;
+                    document.getElementById('systemStatus').textContent = '🟢 Online';
+                } else {
+                    document.getElementById('backupList').innerHTML = 
+                        '<p class="alert alert-error">Failed to load backups: ' + (data.message || 'Unknown error') + '</p>';
+                }
+            } catch (error) {
+                document.getElementById('backupList').innerHTML = 
+                    '<p class="alert alert-error">Error loading backups: ' + error.message + '</p>';
+            }
+        }
+        
+        // Display backup files
+        function displayBackups() {
+            const backupList = document.getElementById('backupList');
+            
+            if (backups.length === 0) {
+                backupList.innerHTML = '<p class="alert alert-warning">No backup files found</p>';
+                return;
+            }
+            
+            let html = '';
+            backups.forEach((backup, index) => {
+                const date = new Date(backup.modified).toLocaleString();
+                html += `
+                    <div class="backup-item" onclick="selectBackup(${index})">
+                        <strong>${backup.filename}</strong>
+                        <small>Size: ${backup.sizeFormatted} | Type: ${backup.type} | Modified: ${date}</small>
+                    </div>
+                `;
+            });
+            
+            backupList.innerHTML = html;
+        }
+        
+        // Select a backup file
+        function selectBackup(index) {
+            // Remove previous selection
+            document.querySelectorAll('.backup-item').forEach(item => {
+                item.classList.remove('selected');
+            });
+            
+            // Select new backup
+            document.querySelectorAll('.backup-item')[index].classList.add('selected');
+            selectedBackup = backups[index];
+            
+            // Show backup details
+            const details = `
+                <strong>File:</strong> ${selectedBackup.filename}<br>
+                <strong>Size:</strong> ${selectedBackup.sizeFormatted}<br>
+                <strong>Type:</strong> ${selectedBackup.type}<br>
+                <strong>Modified:</strong> ${new Date(selectedBackup.modified).toLocaleString()}
+            `;
+            
+            document.getElementById('selectedBackupDetails').innerHTML = details;
+            document.getElementById('selectedBackupInfo').classList.remove('hidden');
+            document.getElementById('restoreBtn').disabled = false;
+        }
+        
+        // Confirm restore operation
+        function confirmRestore() {
+            if (!selectedBackup) {
+                alert('Please select a backup file first');
+                return;
+            }
+            
+            const confirmed = confirm(
+                `⚠️ WARNING: This will COMPLETELY REPLACE the current database!\n\n` +
+                `Selected backup: ${selectedBackup.filename}\n` +
+                `Size: ${selectedBackup.sizeFormatted}\n\n` +
+                `Are you sure you want to proceed?`
+            );
+            
+            if (confirmed) {
+                performRestore();
+            }
+        }
+        
+        // Perform database restore
+        async function performRestore() {
+            document.getElementById('restoreProgress').classList.remove('hidden');
+            document.getElementById('restoreBtn').disabled = true;
+            
+            let progress = 0;
+            const progressBar = document.getElementById('progressBar');
+            const statusText = document.getElementById('restoreStatus');
+            
+            // Simulate progress updates
+            const progressInterval = setInterval(() => {
+                progress += Math.random() * 10;
+                if (progress > 90) progress = 90;
+                progressBar.style.width = progress + '%';
+            }, 500);
+            
+            try {
+                statusText.textContent = 'Sending restore request...';
+                
+                const response = await fetch('/api/emergency/restore', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${authToken}`
+                    },
+                    body: JSON.stringify({
+                        filename: selectedBackup.filename,
+                        force: true
+                    })
+                });
+                
+                const data = await response.json();
+                clearInterval(progressInterval);
+                progressBar.style.width = '100%';
+                
+                document.getElementById('restoreProgress').classList.add('hidden');
+                
+                if (response.ok && data.success) {
+                    showRestoreResult(true, data);
+                } else {
+                    showRestoreResult(false, data);
+                }
+            } catch (error) {
+                clearInterval(progressInterval);
+                document.getElementById('restoreProgress').classList.add('hidden');
+                showRestoreResult(false, { message: 'Connection error: ' + error.message });
+            }
+            
+            document.getElementById('restoreBtn').disabled = false;
+        }
+        
+        // Show restore results
+        function showRestoreResult(success, data) {
+            const resultDiv = document.getElementById('restoreResult');
+            
+            if (success) {
+                const verification = data.data.verification || {};
+                resultDiv.innerHTML = `
+                    <div class="alert alert-success">
+                        <h4>✅ Restore Completed Successfully!</h4>
+                        <p><strong>File:</strong> ${data.data.filename}</p>
+                        <p><strong>Duration:</strong> ${data.data.duration}</p>
+                        ${verification.verified ? 
+                            `<p><strong>Verification:</strong> ✅ Passed (${verification.userCount || 'N/A'} users found)</p>` :
+                            '<p><strong>Verification:</strong> ⚠️ Issues detected</p>'
+                        }
+                        <p><strong>Database Status:</strong> 🟢 Operational</p>
+                    </div>
+                `;
+            } else {
+                resultDiv.innerHTML = `
+                    <div class="alert alert-error">
+                        <h4>❌ Restore Failed</h4>
+                        <p><strong>Error:</strong> ${data.message || 'Unknown error'}</p>
+                        ${data.error ? `<p><strong>Details:</strong> ${data.error}</p>` : ''}
+                        <p>Please try again with a different backup file or contact support.</p>
+                    </div>
+                `;
+            }
+            
+            resultDiv.classList.remove('hidden');
+        }
+        
+        // Refresh backup list
+        function refreshBackups() {
+            selectedBackup = null;
+            document.getElementById('selectedBackupInfo').classList.add('hidden');
+            document.getElementById('restoreBtn').disabled = true;
+            document.getElementById('restoreResult').classList.add('hidden');
+            loadBackups();
+        }
+        
+        // Logout
+        function logout() {
+            authToken = null;
+            selectedBackup = null;
+            document.getElementById('recoveryInterface').classList.remove('active');
+            document.getElementById('loginForm').classList.add('active');
+            document.getElementById('loginError').classList.add('hidden');
+            document.getElementById('restoreResult').classList.add('hidden');
+        }
+        
+        // Allow Enter key to login
+        document.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter' && document.getElementById('loginForm').classList.contains('active')) {
+                login();
+            }
+        });
+    </script>
+</body>
+</html>

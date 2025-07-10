@@ -1,0 +1,272 @@
+[2025-07-04T18:37:17.537Z] Emergency Recovery Server started on port 3002
+[2025-07-04T18:39:57.715Z] Emergency login attempt: emergency_admin
+[2025-07-04T18:39:57.717Z] Emergency login successful: emergency_admin
+[2025-07-04T18:39:57.960Z] Database status check failed: password authentication failed for user "postgres"
+[2025-07-04T18:39:57.974Z] Listing backup files for emergency recovery
+[2025-07-04T18:48:19.799Z] Emergency login attempt: emergency_admin
+[2025-07-04T18:48:19.800Z] Emergency login successful: emergency_admin
+[2025-07-04T18:48:19.809Z] Listing backup files for emergency recovery
+[2025-07-04T18:48:22.503Z] Emergency login attempt: emergency_admin
+[2025-07-04T18:48:22.506Z] Emergency login successful: emergency_admin
+[2025-07-04T18:48:22.596Z] Database status check failed: password authentication failed for user "postgres"
+[2025-07-04T18:50:44.587Z] Emergency Recovery Server started on port 3002
+[2025-07-04T18:53:50.788Z] Emergency login attempt: emergency_admin
+[2025-07-04T18:53:50.791Z] Emergency login successful: emergency_admin
+[2025-07-04T18:53:50.797Z] Listing backup files for emergency recovery
+[2025-07-04T18:54:03.037Z] Emergency login attempt: emergency_admin
+[2025-07-04T18:54:03.038Z] Emergency login successful: emergency_admin
+[2025-07-04T18:54:03.248Z] Database status check failed: password authentication failed for user "postgres"
+[2025-07-04T18:56:33.637Z] Emergency login attempt: emergency_admin
+[2025-07-04T18:56:33.639Z] Emergency login successful: emergency_admin
+[2025-07-04T18:56:33.653Z] Listing backup files for emergency recovery
+[2025-07-04T19:08:08.436Z] Emergency login attempt: emergency_admin
+[2025-07-04T19:08:08.437Z] Emergency login successful: emergency_admin
+[2025-07-04T19:08:08.448Z] Listing backup files for emergency recovery
+[2025-07-04T19:08:08.544Z] Database status check failed: password authentication failed for user "postgres"
+[2025-07-04T19:25:28.167Z] Emergency login attempt: wrong
+[2025-07-04T19:25:28.168Z] Emergency login failed: wrong
+[2025-07-04T19:25:28.178Z] Emergency login attempt: emergency_admin
+[2025-07-04T19:25:28.180Z] Emergency login successful: emergency_admin
+[2025-07-04T19:25:28.191Z] Listing backup files for emergency recovery
+[2025-07-04T19:26:04.454Z] Emergency login attempt: emergency_admin
+[2025-07-04T19:26:04.455Z] Emergency login successful: emergency_admin
+[2025-07-04T19:26:04.463Z] Listing backup files for emergency recovery
+[2025-07-04T19:26:57.355Z] Emergency Recovery Server started on port 3002
+[2025-07-04T19:28:01.282Z] Emergency login attempt: emergency_admin
+[2025-07-04T19:28:01.283Z] Emergency login successful: emergency_admin
+[2025-07-04T19:28:01.290Z] Listing backup files for emergency recovery
+[2025-07-04T19:28:24.228Z] Emergency login attempt: wrong
+[2025-07-04T19:28:24.229Z] Emergency login failed: wrong
+[2025-07-04T19:28:24.241Z] Emergency login attempt: emergency_admin
+[2025-07-04T19:28:24.243Z] Emergency login successful: emergency_admin
+[2025-07-04T19:28:24.259Z] Listing backup files for emergency recovery
+[2025-07-04T19:29:09.576Z] Emergency login attempt: wrong
+[2025-07-04T19:29:09.579Z] Emergency login failed: wrong
+[2025-07-04T19:29:09.596Z] Emergency login attempt: emergency_admin
+[2025-07-04T19:29:09.598Z] Emergency login successful: emergency_admin
+[2025-07-04T19:29:09.614Z] Listing backup files for emergency recovery
+[2025-07-04T19:29:09.657Z] Starting emergency database restore: ecommerce_backup_2025-07-04_01-48-21.sql
+[2025-07-04T19:29:09.659Z] Executing restore command: psql -h localhost -p 5432 -U postgres -d postgres --no-password -f D:\year2\year2_term3\DatabaseAdmin\project_db(v2)\backups\ecommerce_backup_2025-07-04_01-48-21.sql
+[2025-07-04T19:29:09.855Z] Emergency restore failed with code 2: psql: error: connection to server at "localhost" (::1), port 5432 failed: fe_sendauth: no password supplied
+
+[2025-07-04T19:29:55.732Z] Emergency login attempt: emergency_admin
+[2025-07-04T19:29:55.734Z] Emergency login successful: emergency_admin
+[2025-07-04T19:29:55.744Z] Listing backup files for emergency recovery
+[2025-07-04T19:42:12.317Z] Emergency login attempt: emergency_admin
+[2025-07-04T19:42:12.318Z] Emergency login successful: emergency_admin
+[2025-07-04T19:42:12.331Z] Listing backup files for emergency recovery
+[2025-07-04T19:42:12.352Z] Starting emergency database restore: ecommerce_backup_2025-07-04_01-48-21.sql
+[2025-07-04T19:42:12.353Z] Executing restore command: psql -h localhost -p 5432 -U postgres -d postgres --no-password -f D:\year2\year2_term3\DatabaseAdmin\project_db(v2)\backups\ecommerce_backup_2025-07-04_01-48-21.sql
+[2025-07-04T19:42:12.430Z] Emergency restore failed with code 2: psql: error: connection to server at "localhost" (::1), port 5432 failed: fe_sendauth: no password supplied
+
+[2025-07-04T19:43:52.656Z] Emergency Recovery Server started on port 3002
+[2025-07-04T19:45:33.550Z] Emergency login attempt: emergency_admin
+[2025-07-04T19:45:33.551Z] Emergency login successful: emergency_admin
+[2025-07-04T19:45:33.560Z] Listing backup files for emergency recovery
+[2025-07-04T19:45:33.589Z] Starting emergency database restore: ecommerce_backup_2025-07-04_01-48-21.sql
+[2025-07-04T19:45:33.590Z] Executing restore command: psql -h localhost -p 5432 -U postgres -d postgres --no-password -f D:\year2\year2_term3\DatabaseAdmin\project_db(v2)\backups\ecommerce_backup_2025-07-04_01-48-21.sql
+[2025-07-04T19:45:34.888Z] Emergency restore completed successfully in 1298ms
+[2025-07-04T19:45:35.022Z] Restoration verified: 4 users found
+[2025-07-04T20:08:46.244Z] Emergency Recovery Server started on port 3002
+[2025-07-04T20:09:06.783Z] Emergency login attempt: emergency_admin
+[2025-07-04T20:09:06.785Z] Emergency login successful: emergency_admin
+[2025-07-04T20:09:13.853Z] Listing backup files for emergency recovery
+[2025-07-04T20:10:27.327Z] Emergency login attempt: emergency_admin
+[2025-07-04T20:10:27.328Z] Emergency login successful: emergency_admin
+[2025-07-04T20:10:27.336Z] Listing backup files for emergency recovery
+[2025-07-04T20:10:50.643Z] Starting emergency database restore: ecommerce_backup_2025-07-04_01-48-21.sql
+[2025-07-04T20:10:50.645Z] Executing restore command: psql -h localhost -p 5432 -U postgres -d postgres --no-password -f D:\year2\year2_term3\DatabaseAdmin\project_db(v2)\backups\ecommerce_backup_2025-07-04_01-48-21.sql
+[2025-07-04T20:10:51.788Z] Emergency restore completed successfully in 1143ms
+[2025-07-04T20:10:52.051Z] Restoration verified: 4 users found
+[2025-07-04T20:16:54.710Z] Starting emergency database restore: ecommerce_backup_2025-07-04_01-48-21.sql
+[2025-07-04T20:16:54.712Z] Executing restore command: psql -h localhost -p 5432 -U postgres -d postgres --no-password -f D:\year2\year2_term3\DatabaseAdmin\project_db(v2)\backups\ecommerce_backup_2025-07-04_01-48-21.sql
+[2025-07-04T20:16:55.771Z] Emergency restore completed successfully in 1059ms
+[2025-07-04T20:16:55.842Z] Restoration verified: 4 users found
+[2025-07-04T20:19:56.289Z] Emergency login attempt: emergency_admin
+[2025-07-04T20:19:56.291Z] Emergency login successful: emergency_admin
+[2025-07-04T20:19:56.303Z] Listing backup files for emergency recovery
+[2025-07-04T20:20:07.964Z] Starting emergency database restore: ecommerce_backup_2025-07-04_01-48-21.sql
+[2025-07-04T20:20:07.967Z] Executing restore command: psql -h localhost -p 5432 -U postgres -d postgres --no-password -f D:\year2\year2_term3\DatabaseAdmin\project_db(v2)\backups\ecommerce_backup_2025-07-04_01-48-21.sql
+[2025-07-04T20:20:09.008Z] Emergency restore completed successfully in 1042ms
+[2025-07-04T20:20:09.070Z] Restoration verified: 4 users found
+[2025-07-04T20:20:15.068Z] Starting emergency database restore: ecommerce_backup_2025-07-04_01-48-21.sql
+[2025-07-04T20:20:15.070Z] Executing restore command: psql -h localhost -p 5432 -U postgres -d postgres --no-password -f D:\year2\year2_term3\DatabaseAdmin\project_db(v2)\backups\ecommerce_backup_2025-07-04_01-48-21.sql
+[2025-07-04T20:20:16.154Z] Emergency restore completed successfully in 1084ms
+[2025-07-04T20:20:16.219Z] Restoration verified: 4 users found
+[2025-07-04T20:26:54.662Z] Emergency login attempt: emergency_admin
+[2025-07-04T20:26:54.664Z] Emergency login successful: emergency_admin
+[2025-07-04T20:26:54.676Z] Listing backup files for emergency recovery
+[2025-07-04T20:27:00.895Z] Starting emergency database restore: ecommerce_backup_2025-07-04_01-48-21.sql
+[2025-07-04T20:27:00.896Z] Executing restore command: psql -h localhost -p 5432 -U postgres -d postgres --no-password -f D:\year2\year2_term3\DatabaseAdmin\project_db(v2)\backups\ecommerce_backup_2025-07-04_01-48-21.sql
+[2025-07-04T20:27:01.961Z] Emergency restore completed successfully in 1065ms
+[2025-07-04T20:27:02.042Z] Restoration verified: 4 users found
+[2025-07-08T13:34:23.755Z] Emergency Recovery Server started on port 3002
+[2025-07-08T13:35:10.335Z] Emergency login attempt: emergency_admin
+[2025-07-08T13:35:10.337Z] Emergency login successful: emergency_admin
+[2025-07-08T13:35:10.766Z] Listing backup files for emergency recovery
+[2025-07-08T13:35:42.497Z] Emergency login attempt: emergency_admin
+[2025-07-08T13:35:42.499Z] Emergency login successful: emergency_admin
+[2025-07-08T13:35:42.512Z] Listing backup files for emergency recovery
+[2025-07-08T13:37:36.725Z] Starting emergency database restore: ecommerce_data_2025-06-28_03-20-39.sql
+[2025-07-08T13:37:36.728Z] Executing restore command: psql -h localhost -p 5432 -U postgres -d postgres --no-password -f D:\year2\year2_term3\DatabaseAdmin\project_db(v2)\backups\ecommerce_data_2025-06-28_03-20-39.sql
+[2025-07-08T13:37:38.605Z] Emergency restore completed successfully in 1877ms
+[2025-07-08T13:37:38.660Z] Restoration verified: 4 users found
+[2025-07-08T13:39:34.591Z] Starting emergency database restore: ecommerce_data_2025-06-27_04-13-11.sql
+[2025-07-08T13:39:34.594Z] Executing restore command: psql -h localhost -p 5432 -U postgres -d postgres --no-password -f D:\year2\year2_term3\DatabaseAdmin\project_db(v2)\backups\ecommerce_data_2025-06-27_04-13-11.sql
+[2025-07-08T13:39:36.363Z] Emergency restore completed successfully in 1769ms
+[2025-07-08T13:39:36.417Z] Restoration verified: 4 users found
+[2025-07-08T13:40:10.105Z] Listing backup files for emergency recovery
+[2025-07-08T13:40:10.889Z] Listing backup files for emergency recovery
+[2025-07-08T13:40:11.344Z] Listing backup files for emergency recovery
+[2025-07-08T13:40:11.568Z] Listing backup files for emergency recovery
+[2025-07-08T13:40:11.849Z] Listing backup files for emergency recovery
+[2025-07-08T13:40:12.403Z] Listing backup files for emergency recovery
+[2025-07-08T13:40:39.115Z] Starting emergency database restore: ecommerce_data_2025-06-27_04-13-11.sql
+[2025-07-08T13:40:39.117Z] Executing restore command: psql -h localhost -p 5432 -U postgres -d postgres --no-password -f D:\year2\year2_term3\DatabaseAdmin\project_db(v2)\backups\ecommerce_data_2025-06-27_04-13-11.sql
+[2025-07-08T13:40:40.782Z] Emergency restore completed successfully in 1665ms
+[2025-07-08T13:40:40.892Z] Restoration verified: 4 users found
+[2025-07-08T14:21:31.066Z] Emergency login attempt: emergency_admin
+[2025-07-08T14:21:31.072Z] Emergency login successful: emergency_admin
+[2025-07-08T14:21:31.089Z] Listing backup files for emergency recovery
+[2025-07-08T14:21:44.934Z] Starting emergency database restore: ecommerce_backup_2025-07-08_21-06-33.sql
+[2025-07-08T14:21:44.936Z] Executing restore command: psql -h localhost -p 5432 -U postgres -d postgres --no-password -f D:\year2\year2_term3\DatabaseAdmin\project_db(v2)\backups\ecommerce_backup_2025-07-08_21-06-33.sql
+[2025-07-08T14:21:48.551Z] Emergency restore completed successfully in 3615ms
+[2025-07-08T14:21:48.705Z] Restoration verified: 10002 users found
+[2025-07-08T14:53:57.802Z] Starting emergency database restore: ecommerce_backup_2025-07-08_21-06-33.sql
+[2025-07-08T14:53:57.808Z] Executing restore command: psql -h localhost -p 5432 -U postgres -d postgres --no-password -f D:\year2\year2_term3\DatabaseAdmin\project_db(v2)\backups\ecommerce_backup_2025-07-08_21-06-33.sql
+[2025-07-08T14:54:03.682Z] Emergency restore completed successfully in 5875ms
+[2025-07-08T14:54:03.923Z] Restoration verified: 4 users found
+[2025-07-08T14:54:34.256Z] Starting emergency database restore: ecommerce_backup_2025-07-08_21-06-02.sql
+[2025-07-08T14:54:34.259Z] Executing restore command: psql -h localhost -p 5432 -U postgres -d postgres --no-password -f D:\year2\year2_term3\DatabaseAdmin\project_db(v2)\backups\ecommerce_backup_2025-07-08_21-06-02.sql
+[2025-07-08T14:54:40.099Z] Emergency restore completed successfully in 5840ms
+[2025-07-08T14:54:40.196Z] Restoration verified: 4 users found
+[2025-07-08T14:54:59.457Z] Starting emergency database restore: ecommerce_backup_2025-06-27_04-16-29.sql
+[2025-07-08T14:54:59.460Z] Executing restore command: psql -h localhost -p 5432 -U postgres -d postgres --no-password -f D:\year2\year2_term3\DatabaseAdmin\project_db(v2)\backups\ecommerce_backup_2025-06-27_04-16-29.sql
+[2025-07-08T14:55:01.933Z] Emergency restore completed successfully in 2474ms
+[2025-07-08T14:55:02.051Z] Restoration verified: 10002 users found
+[2025-07-08T14:55:31.008Z] Starting emergency database restore: ecommerce_backup_2025-07-08_21-06-33.sql
+[2025-07-08T14:55:31.009Z] Executing restore command: psql -h localhost -p 5432 -U postgres -d postgres --no-password -f D:\year2\year2_term3\DatabaseAdmin\project_db(v2)\backups\ecommerce_backup_2025-07-08_21-06-33.sql
+[2025-07-08T14:55:38.428Z] Emergency restore completed successfully in 7419ms
+[2025-07-08T14:55:38.631Z] Restoration verified: 10002 users found
+[2025-07-09T07:30:56.264Z] Emergency Recovery Server started on port 3002
+[2025-07-09T07:31:05.632Z] Emergency login attempt: emergency_admin
+[2025-07-09T07:31:05.633Z] Emergency login successful: emergency_admin
+[2025-07-09T07:31:05.648Z] Listing backup files for emergency recovery
+[2025-07-09T07:31:15.589Z] Starting emergency database restore: ecommerce_backup_2025-07-09_14-27-30.sql
+[2025-07-09T07:31:15.592Z] Executing restore command: psql -h localhost -p 5432 -U postgres -d postgres --no-password -f D:\year2\year2_term3\DatabaseAdmin\project_db(v2)\backups\ecommerce_backup_2025-07-09_14-27-30.sql
+[2025-07-09T07:31:18.480Z] Emergency restore completed successfully in 2888ms
+[2025-07-09T07:31:18.882Z] Restoration verified: 10002 users found
+[2025-07-09T07:48:40.054Z] Emergency Recovery Server started on port 3002
+[2025-07-09T07:48:47.983Z] Emergency login attempt: emergency_admin
+[2025-07-09T07:48:47.984Z] Emergency login successful: emergency_admin
+[2025-07-09T07:48:47.995Z] Listing backup files for emergency recovery
+[2025-07-09T07:48:57.914Z] Starting emergency database restore: ecommerce_backup_2025-07-09_14-27-30.sql
+[2025-07-09T07:48:57.919Z] Executing restore command: psql -h localhost -p 5432 -U postgres -d postgres --no-password -f D:\year2\year2_term3\DatabaseAdmin\project_db(v2)\backups\ecommerce_backup_2025-07-09_14-27-30.sql
+[2025-07-09T07:49:00.779Z] Emergency restore completed successfully in 2861ms
+[2025-07-09T07:49:02.546Z] Restoration verified: 10002 users found
+[2025-07-09T18:18:16.092Z] Emergency Recovery Server started on port 3002
+[2025-07-09T18:18:20.220Z] Emergency login attempt: emergency_admin
+[2025-07-09T18:18:20.222Z] Emergency login successful: emergency_admin
+[2025-07-09T18:18:20.237Z] Listing backup files for emergency recovery
+[2025-07-09T18:18:28.797Z] Starting emergency database restore: ecommerce_backup_2025-07-09_14-27-30.sql
+[2025-07-09T18:18:28.800Z] Executing restore command: psql -h localhost -p 5432 -U postgres -d postgres --no-password -f D:\year2\year2_term3\DatabaseAdmin\project_db(v2)\backups\ecommerce_backup_2025-07-09_14-27-30.sql
+[2025-07-09T18:18:32.263Z] Emergency restore completed successfully in 3463ms
+[2025-07-09T18:18:32.728Z] Restoration verified: 10002 users found
+[2025-07-09T18:29:20.058Z] Emergency Recovery Server started on port 3002
+[2025-07-09T18:29:57.124Z] Emergency login attempt: emergency_admin
+[2025-07-09T18:29:57.125Z] Emergency login successful: emergency_admin
+[2025-07-09T18:31:55.416Z] Emergency login attempt: emergency_admin
+[2025-07-09T18:31:55.418Z] Emergency login successful: emergency_admin
+[2025-07-09T18:32:03.514Z] Starting emergency database restore: ecommerce_backup_2025-07-08_21-55-18.sql
+[2025-07-09T18:32:03.515Z] Executing restore command: psql -h localhost -p 5432 -U postgres -d postgres --no-password -f D:\year2\year2_term3\DatabaseAdmin\project_db(v2)\backups\ecommerce_backup_2025-07-08_21-55-18.sql
+[2025-07-09T18:32:09.297Z] Emergency restore completed successfully in 5782ms
+[2025-07-09T18:32:09.471Z] Restoration verified: 10003 users found
+[2025-07-09T18:36:31.662Z] Emergency login attempt: emergency_admin
+[2025-07-09T18:36:31.664Z] Emergency login successful: emergency_admin
+[2025-07-09T18:36:40.187Z] Starting emergency database restore: ecommerce_backup_2025-07-08_21-55-18.sql
+[2025-07-09T18:36:40.190Z] Executing restore command: psql -h localhost -p 5432 -U postgres -d postgres --no-password -f D:\year2\year2_term3\DatabaseAdmin\project_db(v2)\backups\ecommerce_backup_2025-07-08_21-55-18.sql
+[2025-07-09T18:36:46.139Z] Emergency restore completed successfully in 5949ms
+[2025-07-09T18:36:46.232Z] Restoration verified: 10003 users found
+[2025-07-09T18:38:39.669Z] Emergency login attempt: emergency_admin
+[2025-07-09T18:38:39.670Z] Emergency login successful: emergency_admin
+[2025-07-09T18:38:40.201Z] Starting emergency database restore: ecommerce_backup_2025-07-04_01-48-21.sql
+[2025-07-09T18:38:40.201Z] Executing restore command: psql -h localhost -p 5432 -U postgres -d postgres --no-password -f D:\year2\year2_term3\DatabaseAdmin\project_db(v2)\backups\ecommerce_backup_2025-07-04_01-48-21.sql
+[2025-07-09T18:38:46.022Z] Emergency restore completed successfully in 5821ms
+[2025-07-09T18:38:46.105Z] Restoration verified: 10003 users found
+[2025-07-09T18:38:54.034Z] Emergency login attempt: emergency_admin
+[2025-07-09T18:38:54.034Z] Emergency login successful: emergency_admin
+[2025-07-09T18:38:54.487Z] Starting emergency database restore: ecommerce_backup_2025-07-08_21-55-18.sql
+[2025-07-09T18:38:54.488Z] Executing restore command: psql -h localhost -p 5432 -U postgres -d postgres --no-password -f D:\year2\year2_term3\DatabaseAdmin\project_db(v2)\backups\ecommerce_backup_2025-07-08_21-55-18.sql
+[2025-07-09T18:39:00.369Z] Emergency restore completed successfully in 5881ms
+[2025-07-09T18:39:00.459Z] Restoration verified: 10003 users found
+[2025-07-09T18:42:21.273Z] Emergency login attempt: emergency_admin
+[2025-07-09T18:42:21.275Z] Emergency login successful: emergency_admin
+[2025-07-09T18:42:21.470Z] Starting emergency database restore: ecommerce_backup_2025-07-04_01-48-21.sql
+[2025-07-09T18:42:21.471Z] Executing restore command: psql -h localhost -p 5432 -U postgres -d postgres --no-password -f D:\year2\year2_term3\DatabaseAdmin\project_db(v2)\backups\ecommerce_backup_2025-07-04_01-48-21.sql
+[2025-07-09T18:42:28.259Z] Emergency restore completed successfully in 6788ms
+[2025-07-09T18:42:28.449Z] Restoration verified: 4 users found
+[2025-07-09T18:42:36.926Z] Emergency login attempt: emergency_admin
+[2025-07-09T18:42:36.926Z] Emergency login successful: emergency_admin
+[2025-07-09T18:42:37.051Z] Starting emergency database restore: ecommerce_backup_2025-07-08_21-55-18.sql
+[2025-07-09T18:42:37.052Z] Executing restore command: psql -h localhost -p 5432 -U postgres -d postgres --no-password -f D:\year2\year2_term3\DatabaseAdmin\project_db(v2)\backups\ecommerce_backup_2025-07-08_21-55-18.sql
+[2025-07-09T18:42:44.371Z] Emergency restore completed successfully in 7319ms
+[2025-07-09T18:42:44.455Z] Restoration verified: 4 users found
+[2025-07-09T18:50:07.496Z] Listing backup files for emergency recovery
+[2025-07-09T18:50:17.105Z] Starting emergency database restore: ecommerce_backup_2025-07-09_01-20-36.sql
+[2025-07-09T18:50:17.108Z] Executing restore command: psql -h localhost -p 5432 -U postgres -d postgres --no-password -f D:\year2\year2_term3\DatabaseAdmin\project_db(v2)\backups\ecommerce_backup_2025-07-09_01-20-36.sql
+[2025-07-09T18:50:23.658Z] Emergency restore completed successfully in 6550ms
+[2025-07-09T18:50:23.782Z] Restoration verified: 4 users found
+[2025-07-09T18:50:44.590Z] Starting emergency database restore: ecommerce_backup_2025-07-09_14-27-30.sql
+[2025-07-09T18:50:44.592Z] Executing restore command: psql -h localhost -p 5432 -U postgres -d postgres --no-password -f D:\year2\year2_term3\DatabaseAdmin\project_db(v2)\backups\ecommerce_backup_2025-07-09_14-27-30.sql
+[2025-07-09T18:50:50.983Z] Emergency restore completed successfully in 6391ms
+[2025-07-09T18:50:51.074Z] Restoration verified: 4 users found
+[2025-07-09T18:51:07.562Z] Starting emergency database restore: ecommerce_backup_2025-07-08_21-55-18.sql
+[2025-07-09T18:51:07.564Z] Executing restore command: psql -h localhost -p 5432 -U postgres -d postgres --no-password -f D:\year2\year2_term3\DatabaseAdmin\project_db(v2)\backups\ecommerce_backup_2025-07-08_21-55-18.sql
+[2025-07-09T18:51:09.697Z] Emergency restore completed successfully in 2133ms
+[2025-07-09T18:51:09.801Z] Restoration verified: 10002 users found
+[2025-07-09T18:53:46.073Z] Listing backup files for emergency recovery
+[2025-07-09T18:54:01.225Z] Starting emergency database restore: ecommerce_backup_2025-07-09_01-52-43.sql
+[2025-07-09T18:54:01.229Z] Executing restore command: psql -h localhost -p 5432 -U postgres -d postgres --no-password -f D:\year2\year2_term3\DatabaseAdmin\project_db(v2)\backups\ecommerce_backup_2025-07-09_01-52-43.sql
+[2025-07-09T18:54:03.606Z] Emergency restore completed successfully in 2377ms
+[2025-07-09T18:54:03.701Z] Restoration verified: 10003 users found
+[2025-07-09T19:29:41.922Z] Starting emergency database restore: ecommerce_backup_2025-07-09_01-52-43.sql
+[2025-07-09T19:29:41.925Z] Executing restore command: psql -h localhost -p 5432 -U postgres -d postgres --no-password -f D:\year2\year2_term3\DatabaseAdmin\project_db(v2)\backups\ecommerce_backup_2025-07-09_01-52-43.sql
+[2025-07-09T19:29:45.017Z] Emergency restore completed successfully in 3092ms
+[2025-07-09T19:29:45.174Z] Restoration verified: 10003 users found
+[2025-07-09T19:41:02.688Z] Listing backup files for emergency recovery
+[2025-07-09T19:41:10.795Z] Starting emergency database restore: ecommerce_backup_2025-07-09_02-39-07.sql
+[2025-07-09T19:41:10.799Z] Executing restore command: psql -h localhost -p 5432 -U postgres -d postgres --no-password -f D:\year2\year2_term3\DatabaseAdmin\project_db(v2)\backups\ecommerce_backup_2025-07-09_02-39-07.sql
+[2025-07-09T19:41:17.372Z] Emergency restore completed successfully in 6574ms
+[2025-07-09T19:41:17.496Z] Restoration verified: 4 users found
+[2025-07-09T19:41:32.493Z] Starting emergency database restore: ecommerce_backup_2025-07-09_01-52-43.sql
+[2025-07-09T19:41:32.500Z] Executing restore command: psql -h localhost -p 5432 -U postgres -d postgres --no-password -f D:\year2\year2_term3\DatabaseAdmin\project_db(v2)\backups\ecommerce_backup_2025-07-09_01-52-43.sql
+[2025-07-09T19:41:35.434Z] Emergency restore completed successfully in 2936ms
+[2025-07-09T19:41:35.511Z] Restoration verified: 10003 users found
+[2025-07-09T20:12:00.671Z] Emergency login attempt: emergency_admin
+[2025-07-09T20:12:00.673Z] Emergency login successful: emergency_admin
+[2025-07-09T20:12:09.255Z] Starting emergency database restore: ecommerce_backup_2025-07-08_21-55-18.sql
+[2025-07-09T20:12:09.257Z] Executing restore command: psql -h localhost -p 5432 -U postgres -d postgres --no-password -f D:\year2\year2_term3\DatabaseAdmin\project_db(v2)\backups\ecommerce_backup_2025-07-08_21-55-18.sql
+[2025-07-09T20:12:15.857Z] Emergency restore completed successfully in 6600ms
+[2025-07-09T20:12:15.950Z] Restoration verified: 4 users found
+[2025-07-09T20:14:20.872Z] Starting emergency database restore: ecommerce_backup_2025-07-09_02-39-07.sql
+[2025-07-09T20:14:20.874Z] Executing restore command: psql -h localhost -p 5432 -U postgres -d postgres --no-password -f D:\year2\year2_term3\DatabaseAdmin\project_db(v2)\backups\ecommerce_backup_2025-07-09_02-39-07.sql
+[2025-07-09T20:14:27.604Z] Emergency restore completed successfully in 6730ms
+[2025-07-09T20:14:27.732Z] Restoration verified: 4 users found
+[2025-07-09T20:14:43.931Z] Starting emergency database restore: ecommerce_db_full_20250710_023002.backup
+[2025-07-09T20:14:43.935Z] Executing restore command: pg_restore -h localhost -p 5432 -U postgres -d ecommerce_db --verbose --no-password --clean --if-exists --create D:\year2\year2_term3\DatabaseAdmin\project_db(v2)\backups\ecommerce_db_full_20250710_023002.backup
+[2025-07-09T20:14:44.305Z] Emergency restore failed with code 1: pg_restore: error: input file is too short (read 0, expected 5)
+
+[2025-07-09T20:14:55.332Z] Starting emergency database restore: ecommerce_backup_2025-07-09_01-52-43.sql
+[2025-07-09T20:14:55.338Z] Executing restore command: psql -h localhost -p 5432 -U postgres -d postgres --no-password -f D:\year2\year2_term3\DatabaseAdmin\project_db(v2)\backups\ecommerce_backup_2025-07-09_01-52-43.sql
+[2025-07-09T20:14:59.256Z] Emergency restore completed successfully in 3918ms
+[2025-07-09T20:14:59.398Z] Restoration verified: 10003 users found
+[2025-07-09T21:00:39.872Z] Listing backup files for emergency recovery
+[2025-07-09T21:00:51.756Z] Starting emergency database restore: ecommerce_backup_2025-07-09_03-47-34.sql
+[2025-07-09T21:00:51.760Z] Executing restore command: psql -h localhost -p 5432 -U postgres -d postgres --no-password -f D:\year2\year2_term3\DatabaseAdmin\project_db(v2)\backups\ecommerce_backup_2025-07-09_03-47-34.sql
+[2025-07-09T21:00:53.563Z] Emergency restore completed successfully in 1804ms
+[2025-07-09T21:00:53.654Z] Restoration verified: 10003 users found
+[2025-07-09T22:16:39.230Z] Listing backup files for emergency recovery
+[2025-07-09T22:16:48.977Z] Starting emergency database restore: ecommerce_backup_2025-07-09_01-52-43.sql
+[2025-07-09T22:16:48.979Z] Executing restore command: psql -h localhost -p 5432 -U postgres -d postgres --no-password -f D:\year2\year2_term3\DatabaseAdmin\project_db(v2)\backups\ecommerce_backup_2025-07-09_01-52-43.sql
+[2025-07-09T22:16:50.771Z] Emergency restore completed successfully in 1793ms
+[2025-07-09T22:16:50.844Z] Restoration verified: 10003 users found
